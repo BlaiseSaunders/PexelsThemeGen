@@ -15,7 +15,7 @@ query = sys.argv[1]
 def getPage(url):
     print("Scraping: "+url)
     headers = CaseInsensitiveDict()
-    headers["Authorization"] = "563492ad6f91700001000001f3cb9451a6984a4e9714c7c5fbaa3a87"
+    headers["Authorization"] = PEXELS_API_KEY
     resp = requests.get(url, headers=headers)
     print("Status: "+str(resp.status_code))
     
